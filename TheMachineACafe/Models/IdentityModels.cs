@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace TheMachineACafe.Models
 {
@@ -13,5 +14,10 @@ namespace TheMachineACafe.Models
             : base("DefaultConnection")
         {
         }
+
+        public DbSet<Boisson> boissons { get; set; }
+        public DbSet<Selection> Selections { get; set; }
+
+        
     }
 }
